@@ -29,8 +29,7 @@ const TodoItem = styled.p`
   }
 `;
 
-function Todo(props) {
-  const { id, name, status, index } = props;
+function Todo({ id, name, status, index }) {
   const [, dispatch] = useToDoList();
   const delHandler = () => delTodo(dispatch, { id });
   const className = `todo is-${status}`;
