@@ -1,10 +1,9 @@
 import * as React from "react";
 import { Link } from "react-router-dom";
-import { useToDoList, TodoList } from "../components/TodoList";
+import { TodoList, useToDoList } from "../components/TodoList";
 
 export default function MyTodoList() {
   const [todoList] = useToDoList();
-  React.useEffect(() => {}, [todoList]);
   if (todoList.length) {
     return (
       <section>
